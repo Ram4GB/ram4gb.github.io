@@ -1,0 +1,523 @@
+/*MÌNH KHAI BÁO TABLE VÀ FORM SÃN HẾT RỒI CÁC BẠN LẤY RA XÀI HOẶC TẠO CLASS MỚI ĐỂ LÀM*/
+/*XIN ĐỪNG SỬA BẤT CỨ GÌ TẠI NÓ TOÀN CỤC*/
+
+*{
+	line-height: 1.6;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin:0;
+}
+.movedown{
+	padding-top: 10px; /*dont resize this*/
+}
+body{
+	padding: 0;
+	margin:0;
+	background-color: #F1F4F7;
+}
+h1 {
+    font-weight: 300;
+    font-size: 40px;
+}
+header{
+	overflow: hidden;
+	background-color: #111;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+}
+header a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding-top: 20px;
+	float: left;
+}
+header .admin-account{
+	position: absolute;
+	bottom: 30px;
+	right: 10px;
+}
+header .admin-account .img{
+}
+header .admin-account .img img{
+	height:40px;
+	width: 40px;
+}
+#aside{
+	position: fixed;
+	height: 100%;
+	width: 240px;
+	background-color: #fff;
+}
+#content{
+	margin-top: 100px;
+	margin-left: 240px;
+	overflow: hidden;
+}
+.row{
+	display: block;
+	width: 100%;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 24%;}
+.col-4 {width: 31.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.row::after{
+	display: table;
+	content: '';
+	clear: both;
+}
+[class*="col-"]{
+	float: left;
+}
+#aside .profile-sidebar{
+	overflow: hidden;
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	text-align: center;
+}
+#aside .profile-sidebar .img{
+	float: left;
+}
+#aside .profile-sidebar .img img{
+	border-radius: 9999px;
+}
+#aside .profile-sidebar .profile-usertitle{
+	float: left;
+	font-size: 28px;
+}
+#aside .form{
+	margin-top: 15px;
+}
+#aside .form input[type="text"]{
+	width: 220px;
+	padding-left: 5px;	
+	height: 45px;
+	border-radius: 5px;
+	border:1px solid #ddd;
+	margin-left: 5px;
+} 
+#aside .nav{
+	margin-top: 10px;
+}
+#aside .nav ul{
+	list-style: none;
+	padding: 0;
+	margin:0;
+}
+#aside .nav li{
+
+}
+
+#aside .nav li a{
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: #444444;
+}
+#aside .nav li a i{
+	padding-right: 5px;
+}
+#aside .nav li a:hover{
+	background-color: #30a5ff;
+	color: #fff;
+}
+#content{
+	background-color: #F1F4F7;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#content #title{
+	margin:10px;
+	color: #444444;
+}
+#content .container-panel{
+	background-color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px;
+
+	overflow: hidden;
+	margin-bottom: 20px; 
+}
+#content .panel{
+	border-right: 1px solid #ddd;
+	display: block;
+	cursor: pointer;
+}
+#content .panel .icon i{
+	font-size: 2em;
+	color: #30a5ff;
+}
+#content .panel .number{
+	color: #373b45;
+	font-size: 3em;
+}
+#content .panel .meaning{
+	color: #c5c7cc;
+}
+#content .panel:last-child{
+	border: none;
+}
+.row-box{
+	margin-bottom: 20px;
+}
+.row-box .box{
+	background-color: #fff;
+	text-align: center;
+	padding: 40px;
+	margin:5px;
+	cursor: pointer;
+}
+.row-box .box i{
+	font-size: 1.5em;
+	color: #29b7d3;
+	font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+}
+.row-box .box i:hover{
+	color: rgba(0,0,0,0.4);
+}
+.row-box .box .title{
+	font-size: 11px;
+	color: #444;
+}
+.user-progress .title-progress{
+	overflow: hidden;
+}
+.user-progress .left-title{
+	float: left;
+}
+.user-progress .percent-title{
+	float: right;
+}
+.bar-progress{
+	animation-name: toright;
+	animation-duration: 1s;
+}
+@keyframes toright{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+.user-progress{
+	background-color: #fff;
+	padding: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.user-progress .bar-progress{
+	overflow: hidden;
+}
+.user-progress .title-progress{
+	color: #555;
+	font-weight: bold;
+	font-size: 13px;
+}
+.user-progress .title-progress .percent-title{
+	color: #C0C0C0;
+}
+.user-progress .bar-progress div{
+	height: 12px;
+	border-radius: 5px;
+	float: left;
+}
+.user-progress .bar-progress{
+	background-color: #F6F6F6;
+	border-radius: 5px;
+	border:0.5px solid #f5f5f5;
+}
+.clear-both{
+	clear: both;
+}
+/*Chỉ dành riêng cho tất cả table*/
+table tr,td{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+table{
+	width: 90%;
+	margin: auto;
+	border: 1px solid #C8CED3 !important;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+table tr:first-child{
+	background-color: #E4E7EA;
+}
+table tr:first-child th{
+	padding: 10px;
+	color: #5c6873;
+	border-bottom: 2px solid #C8CED3;
+	padding-top: 15px;
+	/*font-size: 1.3em;*/
+}
+table tr{
+	text-align: center;
+	border-bottom: 1px solid #C8CED3;
+	padding-bottom: 2px;
+}
+table tr:hover{
+	background-color: #ECECEC;
+}
+table tr td{
+	padding: 10px;
+	border-bottom: 1px solid #C8CED3;
+}
+table tr td i{
+	font-size: 24px;
+}
+table tr div.last-login{
+	color: #73818f!important;
+	font-size: 15px;
+	font-weight: 300px;
+}
+table tr div.online{
+	color: #333;
+	font-weight: bold;
+}
+table tr td button{
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #20a8d8;
+	border-color: #20a8d8;
+	border:none;
+	border-radius: 4px;
+	color: #fff;
+	margin-left: 2px;
+	margin-bottom: 2px;
+}
+table tr td button:hover{
+	background-color: #1B8EB7;
+}
+table tr td img{
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+}
+/*Kết thúc chỉnh sửa table*/
+/*Form tổng quát*/
+form input[type="button"]{
+	margin-top: 5px;
+	border: none;
+	background-color: #20a8d8;
+	padding: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;
+}
+form div{
+	padding: 5px;
+	cursor: pointer;
+	margin: 5px;
+}
+form div > div:hover{
+	background-color: #20a8d8;
+	color: #fff;
+	border-radius: 5px;
+}
+form h2{
+	color: #39434E;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+form{
+	padding: 20px;
+	border: 1px solid #EAE8E8;
+	text-align: left;
+	background-color: #fff;
+	border-radius: 5px;
+}
+form label{
+	display: block;
+	padding-bottom: 5px;
+	font-size: 20px;
+	font-weight: 300px;
+	color: #5c6873;
+}
+form input[type="text"]{
+	padding: 8px;
+	border-radius: 5px;
+	border: none;
+	border: 1px solid #ddd;
+	color: black;
+	width: 300px;
+	display: block;
+	padding-bottom: 5px;
+}
+form input[type="file"]{
+	
+}
+form button{
+	margin-top: 5px;
+	border: none;
+	background-color: #20a8d8;
+	padding: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;
+}
+form img /*cái này là chỉnh overplay cái form*/
+{
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	border:1px solid #ddd;
+}
+form button:hover{
+	background-color: #1B8EB7;
+}
+/*pop up*/
+.overplay{
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgb(0,0,0,0.15);
+}
+/*my style*/
+.reset-psedo:hover{
+	background-color: #fff;
+}
+table.danhmuc{
+	width: 40%;
+	float: left;
+}
+form.form{
+	float: left;
+	width: 58%;
+	margin-left: 2%;
+}
+form .closepopup {
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+table.table_sp{
+	width: 70%;float: left;
+}
+table.table_sp::after{
+	display: table;
+	clear: both;
+	content: "";
+}
+table.table_sp img{
+	border: none;
+	width: 100px;
+	height: 100px;
+}
+#them_san_pham{
+	padding-left: 2px; 
+	position: fixed;
+	top: 110px;
+	right: 0;
+}
+#them_san_pham form{
+	padding-left: 15px;
+	/*width: 310px;*/
+/*	top: 100px;
+	right: 0;*/
+}
+#pageofbook{
+	display: block;
+	text-align: center;
+	width: 70%;	
+	margin: 5px;
+}
+#pageofbook::after{
+	clear: both;
+}
+#pageofbook a.lockpage{
+	background-color: tomato;
+}
+#pageofbook a{
+	display: inline-block;
+	padding: 5px;
+	margin:1px;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+}
+/*pop up*/ 
+/*Chỉ cần khai báo lớp cha .foroverplay là dùng được cái class này*/
+.overplay{
+	display: none;
+}
+.overplay .formoverplay /*định vị trí cho popup*/
+{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+.formoverplay form{
+	position: relative;
+	width: 500px;
+	animation-name: slide-out;
+	animation-duration: 0.5s;
+}
+@keyframes slide-out{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.formoverplay form input[type="button"]{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: none;
+	background-color: #20a8d8;
+	padding: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;	
+}
+.formoverplay form input[type="button"].close-button{
+	margin-top: 5px;
+	border: none;
+	background-color: red;
+	padding: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;	
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+.formoverplay form input[type="button"].close-button:hover{
+	background-color: tomato;
+}

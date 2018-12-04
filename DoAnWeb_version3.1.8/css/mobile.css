@@ -1,0 +1,125 @@
+/*Code cho điện thoại*/
+@media only screen and (max-width:680px ) {
+	header{
+		position: relative !important;
+		transform: translate(0) !important;
+	}
+	.adver{
+		padding-top:0px;
+	}
+	header .container-header .branding{
+		float: left;
+		width: 100%;
+	}
+	header .container-header .search{
+		float: left;
+		width: 100%;
+		margin-top: 0px;
+	}
+	header .container-header .search input[type="text"] {
+	    width: 97%;
+	}
+	header .container-header .search button {
+    	width: 100%;
+	}
+	header .container-header .topnav{
+		float: left;
+		width: 100%;
+	}
+	.col-2,.col-10
+	{
+		width: 100%;
+	}
+	.adver .col-10 > img{
+		width: 100% !important; 
+	}
+	header .container-header .topnav{
+		position: relative;
+	}
+	header .container-header .topnav ul li{
+		display: none;
+		text-align: center;
+	}
+	header .container-header .topnav ul{
+	}
+	header .container-header .topnav ul li.clickButton{
+		display: block;
+		position: absolute;
+		top:0px;
+		left: 0px;
+		float: none;
+		width: 30px;
+		height: 30px;
+	}	
+	header .container-header .topnav.responsive ul li.clickButton{
+		margin:0;
+	}
+	/**code for tab nav bar */
+	header .container-header .topnav.responsive ul li{
+		float: none;
+		display: block;
+		width: 100%;
+		margin:5px;
+	}
+	header .container-header .topnav.responsive ul li a{
+		text-decoration: none;
+	}
+	header .container-header .topnav ul li label{
+		float: none;	
+	}
+	header .container-header .topnav ul{
+		margin-top: 50px;
+	}
+	.responsive{
+		width: 100%;
+		height: 350px;
+	}
+	.responsive .gallery{
+		margin:0px;
+		height: 300px;
+	}
+	.responsive .gallery img{
+		width: 200px;
+		height: 200px !important;
+		display: block;
+	}
+	.col-4{
+		width: 100%;
+		height: auto;
+	}
+	#pageofbook{
+		margin-top:10px;
+	}
+	#timkiemnangcao select,input[type="text"]{
+		display: block;
+	}
+	.giohang2{
+		width: 100%;
+		height: auto;
+	}
+	.giohang2 .contentbox{
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		padding: 0;
+	}
+	.giohang2 .img {
+		float: left;
+    }
+    .giohang2 .img img{
+    	width: 100%;
+    	height: 200px;
+    }
+	.giohang2 .content {
+    }
+	.boxdiv{
+		width: 100% !important;
+	}
+/*	div.showheader{
+		display: none;
+	}
+	div.toTop img{
+		width: 40px;
+		height: 40px;
+	}*/
+}

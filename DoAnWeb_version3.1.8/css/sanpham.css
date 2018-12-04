@@ -1,0 +1,19 @@
+#pageofbook {
+	text-align: center;
+}
+#pageofbook a{
+	padding: 10px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	border: #333;
+	margin:1px;
+}
+#pageofbook a.lockpage{
+	background-color: white;
+	color: #111;
+	border: 1px solid #111;
+}
+#pageofbook a:hover{
+	background-color: tomato;
+}
