@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+<header>
+	<a class="branding" href="index.html"><h1><span style="color: #30a5ff">Admin</span> Page</h1></a>
+	<div class="admin-account">
+		<div class="img">
+			<a href="admin.html">Đăng xuất</a>
+		</div>
+	</div>
+</header>
+<div id="aside">
+	<div class="profile-sidebar">
+		<div class="img">
+			<img src="img/user.png">
+		</div>
+		<div class="profile-usertitle">
+			<div class="profile-usertitle-name">Username</div>
+		</div>
+	</div>
+	<div>
+		<div class="form">
+			<input type="text" name="" placeholder="search">
+		</div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="index.html?khachhang"><i class="fas fa-user-circle"></i>Khách hàng</a></li>
+			<li><a href="index.html?donhang"><i class="fas fa-cubes"></i>Đơn hàng</a></li>
+			<li><a href="index.html?sanpham&0"><i class="fas fa-book"></i>Sản phẩm</a></li>
+			<li><a href="index.html?danhmuc"><i class="far fa-calendar-alt"></i>Danh mục</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content" class="movedown">
+</div>
+<div class="overplay" id="showpopup">
+	<div class="formoverplay">
+		<form>
+			<h2>Nhập lại thông tin</h2>
+			<input onclick="closepopup()" class="close-button" type="button" value="X" name="">	
+			<label>Key</label>
+			<input type="text" name="" id="key_danh_muc_1">
+			<label>Name</label>
+			<input type="text" name="" id="ten_danh_muc_1">
+			<input type="button" value="Lưu" name="" id="btn-luu" onclick="luu_danh_muc()">
+		</form>
+	</div>
+</div> <!-- đây là overplay sửa danh mục -->
+<div class="overplay">
+	<div class="formoverplay" >
+		<form>
+			<h2>Sửa sản phẩm</h2>
+			<img src="" id="img">
+			<label>Hình Ảnh</label>
+			<input id="file" type="file" name="">
+			<label>Mã sản phẩm</label>
+			<input type="text" name="" id="ma_san_pham">
+			<label>Tên sản phẩm</label>
+			<input type="text" name="" id="ten_san_pham">
+			<label>Danh mục</label>
+			<input type="text" name="" id="danh_muc">
+			<label>Giá</label>
+			<input type="text" name="" id="gia">
+			<label>Tác giả</label>
+			<input type="text" name="" id="tac_gia">
+			<input type="button" name="" value="Lưu" id="btn_luu_san_pham" onclick="luu()" >
+			<input type="button" name="" class="close-button" value="X" onclick="closepopup()">
+		</form>
+	</div>
+</div>
+<!-- đây là pop up xem chi tiết đơn hàng -->
+<div class="overplay">
+	<div class="formoverplay">
+		<form>
+			<h2>Chi tiết đơn hàng</h2>
+			<label>Chi tiết</label>
+			<div id="chitiet">
+				
+			</div>
+			<input class="close-button" onclick="closepopup()" type="button" name="" value="X">
+		</form>
+	</div>
+</div><!--  chi tiết hóa đơn -->
+<script type="text/javascript" src="js/windowonload.js">
+</script>
+<script type="text/javascript" src="../js/tonghopsp.js"></script>
+</body>
+</html>

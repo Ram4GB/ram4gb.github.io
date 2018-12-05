@@ -1,0 +1,21 @@
+.toTop img{
+	height: 60px;
+	width: 60px;
+	opacity: 0.65;
+}
+.showheader img{
+	height: 60px;
+	width: 60px;
+	opacity: 0.65;
+}
+.toTop a{
+	position: fixed;
+	bottom:70px;
+	right:7px;
+}
+.showheader a
+{
+	position: fixed;
+	bottom: 0px;
+	right: 7px;
+}
