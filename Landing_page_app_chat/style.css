@@ -1,0 +1,225 @@
+html {
+  scroll-behavior: smooth;
+}
+h2,
+h3,
+h4,
+a,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #00adb5;
+}
+
+p {
+  line-height: 2;
+}
+
+#title {
+  padding: 5% 15%;
+  background-color: #00adb5;
+}
+
+.bg-dark {
+  background-color: transparent !important;
+}
+
+#title .navbar-brand {
+  font-family: "Sacramento", cursive;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+#title button {
+  margin-top: 10px;
+}
+
+#title .navbar {
+  padding: 0px;
+  margin-bottom: 50px;
+}
+
+#title .navbar-nav {
+  font-family: "Montserrat", sans-serif;
+}
+
+#title h1,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+#title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#title p {
+  line-height: 2;
+  margin: 30px 0px 30px 0px;
+}
+
+#title img {
+  width: 400px;
+  height: 500px;
+}
+
+#review {
+  padding: 5% 15%;
+}
+
+#review h2 {
+  font-weight: bold;
+  margin: 10px 0px 20px 0px;
+}
+
+#review a {
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+#review .review-card {
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 8px;
+}
+
+#review .review-card img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+#team {
+  text-align: center;
+  background-color: #00adb5;
+  padding: 3% 15%;
+}
+
+#team p {
+  color: #ffffff;
+}
+
+#team span {
+  color: #393e46;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+hr {
+  border: 4px dotted #00adb5;
+  margin: 30px auto 30px auto;
+  border-bottom: none;
+  width: 4%;
+}
+
+#team img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  #title {
+    text-align: center;
+  }
+  #title img {
+    max-width: 400px;
+    margin-top: 30px;
+  }
+}
+
+#feature {
+  padding: 3% 15%;
+  text-align: center;
+}
+
+#feature i {
+  font-size: 2.5rem;
+  color: #00adb5;
+}
+
+#feature h4 {
+  margin: 20px 0px 10px 0px;
+}
+
+footer {
+  background-color: #222831;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  padding: 3% 15%;
+  cursor: pointer;
+}
+
+footer .brand {
+  font-family: "Sacramento", cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+footer h4 {
+  color: #00adb5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+footer ul {
+  margin: 0px !important;
+  padding: 0px !important;
+  list-style: none;
+}
+
+footer ul li {
+  margin-top: 10px;
+}
+
+footer input {
+  padding: 7px 15px;
+  border: none;
+  outline: none;
+}
+
+footer .col-md-3 {
+  margin-top: 20px;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 50px;
+  color: #00adb5;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media img {
+  margin: 0px 10px 0px 10px;
+}
+
+@media screen and (max-width: 400px) {
+  #title img {
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
