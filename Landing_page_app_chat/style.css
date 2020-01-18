@@ -20,6 +20,15 @@ p {
   line-height: 2;
 }
 
+#introduction h1 {
+  color: #343a40;
+  font-weight: bolder;
+}
+
+#introduction {
+  color: #ffffff;
+}
+
 #title {
   padding: 5% 15%;
   background-color: #00adb5;
