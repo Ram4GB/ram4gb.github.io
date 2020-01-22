@@ -1,4 +1,4 @@
-const url = "https://gallery-ram4gb.herokuapp.com/";
+const url = "https://gallery-ram4gb.herokuapp.com";
 let currentPage = 0;
 const limit = 4;
 
