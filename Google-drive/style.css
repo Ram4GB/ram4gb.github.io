@@ -1,0 +1,154 @@
+#title {
+  padding: 2% 15%;
+  background-color: #252a34;
+  font-family: "Montserrat", sans-serif;
+}
+
+.introduce {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.introduce p {
+  line-height: 2;
+}
+
+.toast-message {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+
+form {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #dfdfdf;
+  margin: 30px 0px 30px 0px;
+  width: 100%;
+}
+
+form label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form .form-item {
+  margin: 30px 0px 30px 0px;
+}
+
+form #file-title {
+  padding: 3px 6px;
+  border: 1px solid #dfdfdf;
+  width: 100%;
+}
+
+.gif {
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+}
+
+#file {
+  width: 100%;
+}
+
+form button {
+  background-color: #252a34;
+  color: #ffffff;
+  padding: 6px 18px;
+  border: none;
+  outline: none;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #08d9d6;
+  text-align: center;
+}
+
+.navbar-brand {
+  color: #08d9d6 !important;
+  font-size: 2rem;
+  font-family: "Sacramento", cursive;
+}
+
+.navbar {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.bg-dark {
+  background-color: #252a34 !important;
+}
+
+#gallery-container {
+  padding: 2% 15%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.gallery-item img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 20px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.gallery-item h4 {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#about {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 3% 15%;
+}
+
+#about img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 30px;
+}
+
+hr {
+  border: 4px dotted #08d9d6;
+  width: 4%;
+  border-bottom: none;
+  margin: 20px auto 20px auto;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination ul li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+  color: #252a34;
+  background-color: #ffffff;
+  border: 1px solid #252a34;
+}
+
+#pagination ul li.active {
+  background-color: #252a34;
+  color: #ffffff;
+}
+
+#pagination ul li:hover {
+  color: #ffffff;
+  background-color: #252a34;
+}
