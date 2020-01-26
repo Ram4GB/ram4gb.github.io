@@ -95,6 +95,10 @@ async function submitFunction() {
   }
 }
 
+$("#btn-submit").click(async function() {
+  await submitFunction();
+});
+
 async function updateStatus(idTodo, status) {
   console.log(status);
   await $.ajax({

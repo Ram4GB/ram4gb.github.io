@@ -1,0 +1,23 @@
+#wrap {
+  text-align: center;
+}
+
+button {
+  font-family: "Indie Flower", cursive;
+  display: block;
+  margin: 50px auto;
+  background-color: #333;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.1rem;
+}
+img {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+}
