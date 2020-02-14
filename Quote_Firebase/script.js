@@ -73,6 +73,7 @@ $(document).ready(function () {
 
   $('#my-form').submit(function (e) {
     e.preventDefault()
+    $('#btn-submit').prop('disabled', true)
     const author = $('#author'),
       description = $('#description')
     image = document.getElementById('image')
@@ -139,7 +140,7 @@ $(document).ready(function () {
     let s = ''
     data.docs.forEach(element => {
       s += `
-        <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 wow flipInX">
             <div class="my-card">
               <img src=${
                 element.data().downloadUrl

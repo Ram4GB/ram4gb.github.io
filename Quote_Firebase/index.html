@@ -23,7 +23,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
     />
-
+    <link rel="stylesheet" href="animate.css" />
     <title>Firebase</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -74,7 +74,7 @@
           <div class="row form-item">
             <div class="col-lg-3"><label for="author">Image:</label></div>
             <div class="col-lg-9">
-              <input id="image" name="image" type="file" />
+              <input accept="image/*" id="image" name="image" type="file" />
             </div>
           </div>
           <div class="row form-item">
@@ -108,7 +108,11 @@
           </div>
           <div class="row">
             <div class="col-lg-6 col-sm-12 offset-lg-3">
-              <button type="submit" class="btn btn-primary w-100">
+              <button
+                id="btn-submit"
+                type="submit"
+                class="btn btn-primary w-100"
+              >
                 Submit
               </button>
             </div>
@@ -142,8 +146,11 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="./config.js"></script>
     <script src="./script.js"></script>
+    <script>
+      new WOW().init()
+    </script>
   </body>
 </html>
