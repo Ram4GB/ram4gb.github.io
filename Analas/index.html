@@ -6,10 +6,17 @@
     <title>Analas | Ram4GB</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./responsive.css" />
   </head>
   <body>
     <!-- Start Menu -->
     <div class="menu">
+      <div class="menu__item menu__logo">
+        <img
+          src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Logo_Ananas_Header.svg"
+          alt=""
+        />
+      </div>
       <div class="menu__item">
         <div class="menu__wrap-icon"><i class="ti-package"></i></div>
         <div class="menu__wrap-link">Tra cứu đơn hàng</div>
@@ -29,6 +36,9 @@
       <div class="menu__item">
         <div class="menu__wrap-icon"><i class="ti-shopping-cart"></i></div>
         <div class="menu__wrap-link">Giỏ hàng</div>
+      </div>
+      <div id="btn-toggle" class="menu__item menu__toggle-mobile-menu">
+        <div class="menu__wrap-icon"><i class="ti-view-grid"></i></div>
       </div>
     </div>
     <!-- End Menu -->
@@ -300,6 +310,7 @@
             </div>
             <div class="col-6">
               <img
+                class="footer__logo-ananas"
                 src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Logo_Ananas_Footer.svg"
                 alt=""
               />
@@ -322,5 +333,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="overplay">
+      <div class="overplay__content">
+        <div id="close-btn-toggle" class="overplay__close-button">
+          <i class="ti-close"></i>
+        </div>
+        <div id="overplay-content"></div>
+      </div>
+      <div onclick="closeNavbar()" class="overplay__cover"></div>
+    </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
