@@ -13,7 +13,7 @@ window.onload = async function() {
 
     // nếu mà chưa login thì chỉ load màn hình default-challenge
     if(!isLogin && (window.location.pathname === urlGit + '/mychallenge.html' || window.location.pathname === urlGit + '/index.html')) {
-        window.location.assign("/default-challenge.html")
+        window.location.assign(urlGit + "/default-challenge.html")
     }
 
     // login rồi mà nó muốn vào login lại thì đẩy về trang chủ của nó
@@ -372,7 +372,7 @@ async function addEventForMyChallengePage() {
     if(!_isProcessChallenge) {
         $("#checkDone").css("display", "none")
         $("#startChallenge").click(function() {
-            window.location.assign("/timer.html")
+            window.location.assign(urlGit + "/timer.html")
         })
     
         let challenge = await $.ajax({
@@ -418,7 +418,7 @@ async function addEventForMyChallengePage() {
         }
         $("#startChallenge").css("display", "none")
         $("#checkDone").click(function() {
-            window.location.assign("/timer.html")
+            window.location.assign(urlGit + "/timer.html")
         })
     }
 }
@@ -529,7 +529,7 @@ async function addEventForDefaultChallengePage() {
             localStorage.setItem("isDoneDefaultChallenge", true)
 
             setTimeout(() => {
-                window.location.assign("/success-default-challenge.html")
+                window.location.assign(urlGit + "/success-default-challenge.html")
             }, 1000)
 
             localStorage.removeItem("isProcessChallenge")
