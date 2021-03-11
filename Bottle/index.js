@@ -400,7 +400,7 @@ async function addEventForMyChallengePage() {
         console.log(user)
         let currentChallenge = null
         for(let i = 0; i < challenge.length; i++) {
-            let index = user.challenge.findIndex(_i => _i["id"] === challenge[i].id)
+            let index = user.challenge.findIndex(_i => _i["item[id]"] === challenge[i].id)
             if(index === -1) {
                 currentChallenge = challenge[i]
             }
