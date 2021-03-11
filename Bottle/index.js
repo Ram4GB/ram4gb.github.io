@@ -1,6 +1,13 @@
 var apiKeyImage = "4b2de95543f833b19ea870c947b9424b"
 var urlGit = "/Bottle"
 
+function logout() {
+    localStorage.clear()
+    setTimeout(() => {
+        window.location.reload()
+    }, 1000)
+}
+
 window.onload = async function() {
     let isLogin = localStorage.getItem("isLogin")
     let isDoneDefaultChallenge = localStorage.getItem("isDoneDefaultChallenge")
