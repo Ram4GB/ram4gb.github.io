@@ -17,7 +17,7 @@ window.onload = async function() {
     }
 
     // login rồi mà nó muốn vào login lại thì đẩy về trang chủ của nó
-    if(isLogin && (window.location.pathname === urlGit + '/login.html' || window.location.pathname === urlGit + '/index.html')) {
+    if(isLogin && (window.location.pathname === urlGit + '/login.html' || window.location.pathname === urlGit + '/index.html' || window.location.pathname === urlGit + "/")) {
         window.location.assign(urlGit + "/mychallenge.html")
     }
 
