@@ -146,16 +146,16 @@ window.onload = async function() {
     });
 
     switch(window.location.pathname) {
-        case '/default-challenge.html':
+        case urlGit + '/default-challenge.html':
             await addEventForDefaultChallengePage()
             break
-        case '/mychallenge.html':
+        case urlGit + '/mychallenge.html':
             await addEventForMyChallengePage()
             break
-        case '/timer.html':
+        case urlGit + '/timer.html':
             await addEventForTimer()
             break
-        case '/ranking.html':
+        case urlGit + '/ranking.html':
             await addEventForRanking()
     }
 
