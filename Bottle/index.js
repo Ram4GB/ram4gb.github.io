@@ -1,4 +1,5 @@
 var apiKeyImage = "4b2de95543f833b19ea870c947b9424b"
+var urlGit = "/Bottle"
 
 window.onload = async function() {
     let isLogin = localStorage.getItem("isLogin")
@@ -6,18 +7,18 @@ window.onload = async function() {
 
     let _isDoneDefaultChallenge = localStorage.getItem("_isDoneDefaultChallenge")
 
-    if(_isDoneDefaultChallenge && window.location.pathname === '/timer.html') {
-        window.location.assign("/upload-image.html")
+    if(_isDoneDefaultChallenge && window.location.pathname === urlGit + '/timer.html') {
+        window.location.assign(urlGit + "/upload-image.html")
     }
 
     // nếu mà chưa login thì chỉ load màn hình default-challenge
-    if(!isLogin && (window.location.pathname === '/mychallenge.html' || window.location.pathname === '/index.html')) {
+    if(!isLogin && (window.location.pathname === urlGit + '/mychallenge.html' || window.location.pathname === urlGit + '/index.html')) {
         window.location.assign("/default-challenge.html")
     }
 
     // login rồi mà nó muốn vào login lại thì đẩy về trang chủ của nó
-    if(isLogin && (window.location.pathname === '/login.html' || window.location.pathname === '/index.html')) {
-        window.location.assign("/mychallenge.html")
+    if(isLogin && (window.location.pathname === urlGit + '/login.html' || window.location.pathname === urlGit + '/index.html')) {
+        window.location.assign(urlGit + "/mychallenge.html")
     }
 
     $("#file").on('change', async function() {
@@ -87,7 +88,7 @@ window.onload = async function() {
                     if(result) {
                         toastr.success("Regiser successfully")
                         setTimeout(() => {
-                            window.location.assign("/login.html")
+                            window.location.assign(urlGit + "/login.html")
                         }, 2000)
                     }
                 }
@@ -124,7 +125,7 @@ window.onload = async function() {
                 localStorage.setItem("isLogin", true)
                 localStorage.setItem("timeLogin", JSON.stringify(new Date()))
                 toastr.success("Login successfully")
-                window.location.assign("/mychallenge.html")
+                window.location.assign(urlGit + "/mychallenge.html")
             } else {
                 toastr.error("Email or pass is not correct")
             }
@@ -134,7 +135,7 @@ window.onload = async function() {
     })
 
     $("#getLocation").click(async function() {
-        window.location.assign("/location.html")
+        window.location.assign(urlGit + "/location.html")
     })
 
     const toBase64 = file => new Promise((resolve, reject) => {
@@ -212,7 +213,7 @@ window.onload = async function() {
         localStorage.setItem("_isDoneDefaultChallenge", true)
 
         setTimeout(() => {
-            window.location.assign("/upload-image.html")
+            window.location.assign(urlGit + "/upload-image.html")
         }, 1000)
 
         localStorage.removeItem("_isProcessChallenge")
@@ -265,7 +266,7 @@ window.onload = async function() {
 
                         toastr.success("Done successfully")
                         setTimeout(() => {
-                            window.location.assign("/mychallenge.html")
+                            window.location.assign(urlGit + "/mychallenge.html")
                         }, 2000)
                     }
                 }
@@ -349,7 +350,7 @@ async function addEventForTimer() {
             toastr.success("Congratulation! You have done challenge")
             localStorage.setItem("_isDoneDefaultChallenge", true)
             setTimeout(() => {
-                window.location.assign("/upload-image.html")
+                window.location.assign(urlGit + "/upload-image.html")
             }, 1000)
 
             localStorage.removeItem("_isProcessChallenge")
@@ -406,7 +407,7 @@ async function addEventForMyChallengePage() {
         } else {
             toastr.success("User has been done all challenge")
             setTimeout(() => {
-                // window.location.assign("/ranking.html")
+                window.location.assign(urlGit + "/ranking.html")
             }, 1000)
         }
     } else {
@@ -462,7 +463,7 @@ async function addEventForDefaultChallengePage() {
             toastr.success("Congratulation! You have done challenge")
             localStorage.setItem("isDoneDefaultChallenge", true)
             setTimeout(() => {
-                window.location.assign("/success-default-challenge.html")
+                window.location.assign(urlGit + "/success-default-challenge.html")
             }, 1000)
 
             localStorage.removeItem("isProcessChallenge")
