@@ -1,13 +1,6 @@
 var apiKeyImage = "4b2de95543f833b19ea870c947b9424b"
 var urlGit = "/Bottle"
 
-function logout() {
-    localStorage.clear()
-    setTimeout(() => {
-        window.location.reload()
-    }, 1000)
-}
-
 window.onload = async function() {
     let isLogin = localStorage.getItem("isLogin")
     let isDoneDefaultChallenge = localStorage.getItem("isDoneDefaultChallenge")
@@ -34,6 +27,7 @@ window.onload = async function() {
         $("#previewImage").attr("src", base64)
     })
     $("#btnRegister").click(async function() {
+        $("#btnRegister").attr("disabled", true)
         let firstName = $("#firstName")
         let lastName = $("#lastName")
         let email = $("#email")
@@ -41,11 +35,13 @@ window.onload = async function() {
 
         if(!$('#file').prop('files')[0]) {
             toastr.error("Please choose your avatar")
+            $("#btnRegister").attr("disabled", false)
             return null
         }
 
         if(!firstName.val() || !lastName.val() || !email.val() || !password.val()) {
             toastr.error("Please enter value correctly")
+            $("#btnRegister").attr("disabled", false)
             return null
         }
 
@@ -58,6 +54,7 @@ window.onload = async function() {
 
         if(index !== -1) {
             toastr.error("Email is used")
+            $("#btnRegister").attr("disabled", false)
             return
         }
 
@@ -104,6 +101,8 @@ window.onload = async function() {
                 console.log('error',error)
             }
         }
+
+        $("#btnRegister").attr("disabled", false)
     })
 
     $("#btnLogin").click(async function() {
@@ -123,9 +122,7 @@ window.onload = async function() {
             }
         })
 
-        console.log(users)
-
-        if(users && users.length >=0) {
+        if(users && users.length > 0) {
             let currentUser = users[0]
             if(currentUser.password === password.val()) {
                 localStorage.setItem("user", JSON.stringify(currentUser))
@@ -282,6 +279,13 @@ window.onload = async function() {
                 console.log('error',error)
             }
         }
+    })
+
+    $("#logoutLink").click(function() {
+        localStorage.clear()
+        setTimeout(() => {
+            window.location.reload()
+        }, 1000)
     })
 }
 
