@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.toast-message {
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-image: url("coorslight-mountains-main.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    padding: 20px;
+    color: #fff;
+    
+}
+
+.input-register {
+    margin-bottom: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 8px 15px;
+}
+
+#btnLogin {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+
+#btnRegister {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+
+.border-bottom {
+    font-size: 30px;
+    position: relative;
+}
+
+.border-bottom::after{
+    content: "";
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    width: 100px;
+}
+
+.wrap-border {
+    border: 5px solid #fff;
+    padding: 40px 20px;
+}
+
+.input-search {
+    border: 4px solid #fff;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 30px;
+    width: 100%;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
