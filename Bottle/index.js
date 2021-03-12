@@ -4,7 +4,7 @@ var urlGit = "/Bottle"
 window.onload = async function() {
     function createSnow() {
         let s = ``
-        for(let i = 0 ; i < 300; i++ ){
+        for(let i = 0 ; i < 10; i++ ){
             s += `<div class="snowflake">
                     ❄
                   </div>`
