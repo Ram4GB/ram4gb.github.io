@@ -4,7 +4,8 @@ var urlGit = "/Bottle"
 // debug
 // var urlGit = ""
 window.onload = async function() {
-    console.log('Current Version 2.123')
+    console.log('Current Version 2.124')
+    console.log('12/3/2021 10:08 PM')
 
     function createSnow() {
         let s = ``
