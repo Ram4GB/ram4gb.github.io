@@ -15,18 +15,30 @@
     <div class="container-background">
         <form class="form">
             <h3 style="text-align: center;text-decoration: underline;margin-bottom: 20px;">PERSONAL INFORMATION</h3>
-            <h3 style="text-align: center;">UPLOAD AVATAR</h3>
-            <label for="file">
-                <img style="width: 100%; height: auto;border: 1px solid #fff;margin-bottom: 10px;" id="previewImage" src="http://thenewburyportfarmersmarket.org/wp-content/themes/atahualpa342/images/inputbackgr.gif" alt="">
+            <label style="display: block;" for="file">
+                <img style="width: 180px; height: auto;border: 1px solid #fff; margin: auto;display: block;" id="previewImage" src="http://thenewburyportfarmersmarket.org/wp-content/themes/atahualpa342/images/inputbackgr.gif" alt="">
                 <input style="display: none;" class="input-register" id="file" type="file">
             </label>
-            <input placeholder="FIRST NAME" class="input-register" type="text" id="firstName">
-            <input placeholder="LAST NAME" class="input-register" type="text" id="lastName">
-            <input placeholder="EMAIL" class="input-register" type="email" id="email">
-            <input placeholder="PASSWORD" class="input-register" type="text" id="password">
-            <div style="text-align: center;">
-                <button class="btn" type="button" id="btnRegister">submit</button>
+            <h3 style="text-align: center;margin-bottom: 10px;">UPLOAD AVATAR</h3>
+            <div class="form-item">
+                <input placeholder="FIRST NAME" class="input-register" type="text" id="firstName">
             </div>
+            <div class="form-item">
+                <input placeholder="LAST NAME" class="input-register" type="text" id="lastName">
+            </div>
+            <div class="form-item">
+                <input placeholder="EMAIL" class="input-register" type="email" id="email">
+            </div>
+            <div class="form-item">
+                <input placeholder="PASSWORD" class="input-register" type="text" id="password">
+            </div>
+            <div>
+                <input checked type="checkbox"> <span style="font-weight: bold; color: #555; font-size: 13px;">TERMS OF SERVICE</span>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn" type="button" id="btnRegister">SIGN UP</button>
+            </div>
+            
         </form>
 
         <script

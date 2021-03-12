@@ -163,6 +163,12 @@ window.onload = async function() {
             await addEventForRanking()
     }
 
+    // cho debug code
+    // await addEventForDefaultChallengePage()
+    // await addEventForMyChallengePage()
+    // await addEventForTimer()
+    // await addEventForRanking()
+
     $("#startMyChallenge").click(async function() {
         // khi người dùng trong trang timer và họ click nút này
 
@@ -313,7 +319,9 @@ async function addEventForRanking() {
     for(let i = 0 ; i < arrayRanking.length; i++) {
         s += `<tr>
                 <td style="color: #fff; background-color: #555;padding: 12px 6px; font-weight: bold">${i + 1}</td>
-                <td style="color: #fff; background-color: #555;padding: 12px 6px">${arrayRanking[i].username}</td>
+                <td style="color: #fff; background-color: #555;padding: 12px 6px;">
+                    <div title="${arrayRanking[i].username}" style="white-space: nowrap; width: 200px; overflow: hidden; text-overflow: ellipsis;">${arrayRanking[i].username}</div>
+                </td>
                 <td style="color: #fff; background-color: #555;padding: 12px 6px">${arrayRanking[i].score}</td>
             </tr>`
     }

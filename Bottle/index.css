@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .toast-message {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+button {
+    font-weight: bold !important;
+    display: none;
 }
 
 body {
@@ -39,6 +44,29 @@ h3 {
     outline: none;
     border: none;
     padding: 8px 15px;
+    padding-left: 0px;
+    background: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.input-register::placeholder{
+    color: #fff;
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.form-item::after{ 
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
 }
 
 #btnLogin {
@@ -68,10 +96,12 @@ h3 {
 
 .border-bottom::after{
     content: "";
-    height: 10px;
-    background-color: red;
+    height: 3px;
+    background-color: #fff;
     position: absolute;
-    width: 100px;
+    width: 100%;
+    left: 0px;
+    bottom: -4px;
 }
 
 .wrap-border {
@@ -82,11 +112,76 @@ h3 {
 .input-search {
     border: 4px solid #fff;
     text-align: center;
-    padding: 10px 10px;
+    padding: 10px 8x;
     font-size: 30px;
     width: 100%;
     outline: none;
     margin-top: 20px;
     margin-bottom: 20px;
+    background: none;
+    color: #fff;
 }
 
+.input-search::placeholder{ 
+    color: #fff;
+    opacity: 0.7;
+}
+
+.fas.fa-search {
+    position: absolute;
+    top: 37%;
+    color: #fff;
+    right: 12px;
+    font-size: 25px;
+}
+
+.input {
+    background: none;
+}
+
+.swing {
+    -moz-animation: 3s ease 0s normal none infinite swing-three;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing-three 0.5s infinite ease-in-out;
+    /* -webkit-transform-origin:top; */
+}
+
+.swing2 {
+    -moz-animation: 3s ease 0s normal none infinite swing-three;
+    -moz-transform-origin: center top;
+    -webkit-animation: swing-threee 0.5s infinite ease-in-out;
+    /* -webkit-transform-origin:top; */
+}
+
+@keyframes swing-three{
+    0%{-webkit-transform:rotate(-10deg)}
+    50%{-webkit-transform:rotate(10deg)}
+    100%{-webkit-transform:rotate(-10deg)}
+}
+
+@keyframes swing-threee{
+    0%{-webkit-transform:rotate(10deg)}
+    50%{-webkit-transform:rotate(-10deg)}
+    100%{-webkit-transform:rotate(10deg)}
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #111;
+}
