@@ -2,6 +2,18 @@ var apiKeyImage = "4b2de95543f833b19ea870c947b9424b"
 var urlGit = "/Bottle"
 
 window.onload = async function() {
+    function createSnow() {
+        let s = ``
+        for(let i = 0 ; i < 300; i++ ){
+            s += `<div class="snowflake">
+                    ❄
+                  </div>`
+        }
+        $("#mySnow").html(s)
+    }
+
+    createSnow()
+
     let isLogin = localStorage.getItem("isLogin")
     let isDoneDefaultChallenge = localStorage.getItem("isDoneDefaultChallenge")
 
