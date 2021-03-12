@@ -15,15 +15,18 @@
     </div>
     <div class="form" style="padding: 0px;">
         <div class="container" style="padding: 27px; display: flex; flex-direction: column; justify-content: center;">
-            <h3 style="color: #fff; font-size: 27px; font-weight: bold;">#NOPHONECHALLENGE</h3>
-            <p id="nameChallenge" style="color: #fff; font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 30px 10px; text-transform: uppercase;"></p>
-            <p id="scoreChallenge" style="color: #fff; font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 20px 10px;"></p>
-            <p id="startChallenge" style="color: red; font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 20px 10px; color: red; cursor: pointer;">Start</p>
-            <p id="checkDone" style="color: red; font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 20px 10px; color: red;">Check success</p>
+            <!-- <h3 style="color: #fff; font-size: 27px; font-weight: bold;">#NOPHONECHALLENGE</h3> -->
+            <img id="NoPhoneChallenge" style="display: block; margin: 0px auto 20px auto" src="/Bottle/images/NoPhoneChallenge.png" alt="no images">
+            <p id="nameChallenge" style="color: #fff; font-size: 30px; font-weight: bold; text-align: center; margin-top: 0px; padding: 10px 10px; text-transform: uppercase;"></p>
+            <p id="scoreChallenge" class="blue" style="font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 20px 10px;"></p>
+            <button type="button" id="startChallenge" class="red btn" style="border-radius: 30px;font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 2px solid #fff; padding: 6px; cursor: pointer; background: none; width: 100px; display: block;margin: auto;">Start</button>
+            <p id="checkDone" class="red" style="font-size: 25px; font-weight: bold; text-align: center; margin-top: 20px; border: 5px solid #fff; padding: 20px 10px; cursor: pointer;">Check success</p>
         </div>
-        <a style="font-weight: bold;color: #111;" href="/Bottle/ranking.html">Ranking</a>
-        <div>
-            <a href="#" style="font-weight: bold;color: #111;" id="logoutLink" >Logout</a>
+        
+        <div style="justify-content: space-between; display: flex;">
+            <a style="font-weight: bold;color: #111;" href="/Bottle/ranking.html">Ranking</a>
+            <!-- <a style="font-weight: bold; opacity: 0.7;" class="gray" href="/ranking.html">Ranking</a> -->
+            <a href="#" style="font-weight: bold; opacity: 0.7;" class="gray" id="logoutLink" >Logout</a>
         </div>
     </div>
 

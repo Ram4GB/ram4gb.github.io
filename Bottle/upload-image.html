@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
-        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />    
+    
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
@@ -17,10 +18,17 @@
         <h1 style="font-size: 30px; text-align: center;">CONGRATULATION</h1>
         <p style="text-align: center; font-size: 17px;">YOU HAVE COMPLETE THE MISSION!</p>
         <p style="text-align: center; font-size: 17px;">UPLOAD YOUR RESULT TO RECEIVE THE SCORE.</p>
-        <label style="display: block;" for="_file">
-            <img style="width: 200px; height: auto;border: 1px solid #fff;margin-bottom: 10px; display: block;margin: auto;" id="previewImage" src="http://thenewburyportfarmersmarket.org/wp-content/themes/atahualpa342/images/inputbackgr.gif" alt="">
+        <!-- <label style="display: block; text-align: center;" for="_file">
+            <img style="width: 200px; height: auto;margin-bottom: 10px; display: block;margin: auto;" id="previewImage" src="https://static.thenounproject.com/png/1156518-200.png" alt="">
             <input style="display: none;" type="file" id="_file">
-        </label>
+        </label> -->
+        <img style="width: 200px; height: auto;margin-bottom: 10px; display: none;margin: auto;" id="previewImage" src="" alt="">
+        <div class="upload-btn-wrapper" style="text-align: center;margin: 10px auto;display: block;">
+            <button style="background: none; border: 0.5px solid #fff; color: #0070b0; border-radius: 4px;" class="btn">
+                <i class="fas fa-upload"></i> Upload image
+            </button>
+            <input class="input-register" id="_file" type="file">
+        </div>
     </div>
     <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"

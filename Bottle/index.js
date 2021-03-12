@@ -1,6 +1,8 @@
 var apiKeyImage = "4b2de95543f833b19ea870c947b9424b"
 var urlGit = "/Bottle"
 
+// debug
+// var urlGit = ""
 window.onload = async function() {
     function createSnow() {
         let s = ``
@@ -35,8 +37,11 @@ window.onload = async function() {
 
     $("#file").on('change', async function() {
         let image = $('#file').prop('files')[0]
-        let base64 = await toBase64(image)
-        $("#previewImage").attr("src", base64)
+        if(image) {
+            let base64 = await toBase64(image)
+            $("#previewImage").css("display", "block")
+            $("#previewImage").attr("src", base64)
+        }
     })
     $("#btnRegister").click(async function() {
         $("#btnRegister").attr("disabled", true)
@@ -143,10 +148,10 @@ window.onload = async function() {
                 toastr.success("Login successfully")
                 window.location.assign(urlGit + "/mychallenge.html")
             } else {
-                toastr.error("Email or pass is not correct")
+                toastr.error("Email or password is not correct")
             }
         } else {
-            toastr.error("Email or pass is not correct")
+            toastr.error("Email or password is not correct")
         }
     })
 
@@ -219,7 +224,7 @@ window.onload = async function() {
         await new Promise((resolve) => {
             intervalTime = setInterval(() => {
                 console.log(endTime.format("m:s"))
-                $("#timeEnd").innerHTML = endTime.format("m:s")
+                // $("#timeEnd").innerHTML = endTime.format("m:s")
                 if(endTime < moment(new Date())) {
                     resolve()
                 } else {
@@ -255,6 +260,7 @@ window.onload = async function() {
             let base64 = await toBase64(image)
             try {
                 $("#previewImage").attr("src", base64)
+                $("#previewImage").css("display", "block")
                 base64 = base64.slice(base64.indexOf(',')+1)
                 
                 let imageUpload = await $.ajax({
@@ -366,7 +372,7 @@ async function addEventForTimer() {
             await new Promise((resolve) => {
                 intervalTime = setInterval(() => {
                     console.log(endTime.format("m:s"))
-                    $("#timeEnd").innerHTML = endTime.format("m:s")
+                    // $("#timeEnd").innerHTML = endTime.format("m:s")
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {
@@ -434,7 +440,7 @@ async function addEventForMyChallengePage() {
             console.log(currentChallenge)
             localStorage.setItem("currentChallenge", JSON.stringify(currentChallenge))
             $("#nameChallenge").text(currentChallenge.name)
-            $("#scoreChallenge").text(currentChallenge.score)
+            $("#scoreChallenge").text(`You got ${currentChallenge.score} points, yayy!!!`)
         } else {
             toastr.success("User has been done all challenge")
             setTimeout(() => {
@@ -445,7 +451,7 @@ async function addEventForMyChallengePage() {
         let currentChallenge = JSON.parse(localStorage.getItem("currentChallenge"))
         if(currentChallenge) {
             $("#nameChallenge").text(currentChallenge.name)
-            $("#scoreChallenge").text(currentChallenge.score)
+            $("#scoreChallenge").text(`You got ${currentChallenge.score} points, yayy!!!`)
         }
         $("#startChallenge").css("display", "none")
         $("#checkDone").click(function() {
@@ -479,7 +485,7 @@ async function addEventForDefaultChallengePage() {
             await new Promise((resolve) => {
                 intervalTime = setInterval(() => {
                     console.log(endTime.format("m:s"))
-                    $("#timeEnd").innerHTML = endTime.format("m:s")
+                    // $("#timeEnd").innerHTML = endTime.format("m:s")
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {
@@ -544,7 +550,7 @@ async function addEventForDefaultChallengePage() {
             await new Promise((resolve) => {
                 intervalTime = setInterval(() => {
                     console.log(endTime.format("m:s"))
-                    $("#timeEnd").innerHTML = endTime.format("m:s")
+                    // $("#timeEnd").innerHTML = endTime.format("m:s")
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {

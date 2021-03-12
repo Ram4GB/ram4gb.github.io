@@ -14,8 +14,13 @@
     <div id="mySnow" class="snowflakes" aria-hidden="true">
     </div>
     <div class="form">
-        <h3 style="font-weight: bold;text-align: center;margin-bottom: 20px;">#NOPHONECHALLENGE</h3>
-        <div class="d-flex wrap-border" style="justify-content: space-between; align-items: flex-end;">
+        <!-- <h3 style="font-weight: bold;text-align: center;margin-bottom: 20px;">#NOPHONECHALLENGE</h3> -->
+        <img 
+            id="NoPhoneChallenge" 
+            style="display: block; margin: 0px auto 20px auto" 
+            src="/Bottle/images/NoPhoneChallenge.png" 
+        alt="no images">
+        <div class="d-flex wrap-border" style="justify-content: center; align-items: flex-end;">
             <div class="border-bottom" style="text-align: center;">
                 <h3>MINUTE</h3>
                 <input class="input" style="width: 120px; text-align: center; padding: 8px 10px; opacity: 0.5; outline: none; border: none;" type="number" id="minute">
@@ -26,9 +31,9 @@
                 <input class="input" style="width: 120px; text-align: center; padding: 8px 10px; opacity: 0.5; outline: none; border: none" type="number" id="second">
             </div>
         </div>
-        <p style="text-align: center;" id="timeEnd"></p>
+        <p style="text-align: center; opacity: 0;" id="timeEnd"></p>
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <button type="button" id="startChallenge" class="btn">Start Challenge</button>
+            <button type="button" id="startChallenge" class="btn oh-my-button">Start Challenge</button>
         </div>
     </div>
 
