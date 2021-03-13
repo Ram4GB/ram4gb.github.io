@@ -181,12 +181,13 @@ window.onload = async function() {
             break
         case urlGit + '/ranking.html':
             await addEventForRanking()
+            break
         case urlGit + '/clear.html':
             localStorage.clear()
             setTimeout(() => {
                 window.location.assign(urlGit + "/index.html")
             }, 1000)
-        break
+            break
     }
 
     // cho debug code
