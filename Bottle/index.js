@@ -4,8 +4,8 @@ var urlGit = "/Bottle"
 // debug
 // var urlGit = ""
 window.onload = async function() {
-    console.log('Current Version 2.126')
-    console.log('13/3/2021 12:28 PM')
+    console.log('Current Version 2.127')
+    console.log('13/3/2021 1:16 PM')
 
     function createSnow() {
         let s = ``
@@ -181,6 +181,12 @@ window.onload = async function() {
             break
         case urlGit + '/ranking.html':
             await addEventForRanking()
+        case urlGit + '/clear.html':
+            localStorage.clear()
+            setTimeout(() => {
+                window.location.assign(urlGit + "/index.html")
+            }, 1000)
+        break
     }
 
     // cho debug code
