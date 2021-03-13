@@ -50,7 +50,7 @@
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: contain;
     position: absolute;
     top: 0;
@@ -126,6 +126,7 @@
 
 .toast-message {
     font-family: "Brandon_Grotesque", sans-serif;
+    text-transform: capitalize;
 }
 
 button {
@@ -444,10 +445,21 @@ h3 {
         display: block; */
         justify-content: center;
     }
+    .modal {
+        top: 80px !important;
+    }
 }
 
 @media only screen and (max-width: 700px) {
     #NoPhoneChallenge {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .sign-up-button {
+        bottom: 150px !important;
+        /* transform: translateY(-50%); */
+        padding: 4px 8px;
     }
 }

@@ -4,8 +4,8 @@ var urlGit = "/Bottle"
 // debug
 // var urlGit = ""
 window.onload = async function() {
-    console.log('Current Version 2.125')
-    console.log('12/3/2021 11:40 PM')
+    console.log('Current Version 2.126')
+    console.log('13/3/2021 12:28 PM')
 
     function createSnow() {
         let s = ``
@@ -228,10 +228,16 @@ window.onload = async function() {
             intervalTime = setInterval(() => {
                 console.log(endTime.format("m:s"))
                 // $("#timeEnd").innerHTML = endTime.format("m:s")
+                let timeEnd = new Date(localStorage.getItem("_timeEnd")).getTime()
+                let currentTime = new Date().getTime()
+                var diffTime = timeEnd - currentTime;
+                var duration = moment.duration(diffTime, 'milliseconds');
                 if(endTime < moment(new Date())) {
                     resolve()
                 } else {
-                    console.log(endTime, moment(new Date()))
+                    // console.log(endTime, moment(new Date()))
+                    $("#minute").val(duration.minutes())
+                    $("#second").val(duration.seconds())
                     $("#timeEnd").text("Estimate end time: " + endTime.format("hh:mm:ss"))
                 }
             }, 1000)
@@ -339,11 +345,11 @@ async function addEventForRanking() {
     let s = ``
     for(let i = 0 ; i < arrayRanking.length; i++) {
         s += `<tr>
-                <td style="color: #fff; background-color: #555;padding: 12px 6px; font-weight: bold">${i + 1}</td>
-                <td style="color: #fff; background-color: #555;padding: 12px 6px;">
+                <td style="color: #111; font-size: 18px ;background-color: #76777a;padding: 12px 6px; font-weight: bold; text-align: center">${i + 1}</td>
+                <td style="color: #111; font-size: 18px ;background-color: #76777a;padding: 12px 6px;">
                     <div title="${arrayRanking[i].username}" style="white-space: nowrap; width: 200px; overflow: hidden; text-overflow: ellipsis;">${arrayRanking[i].username}</div>
                 </td>
-                <td style="color: #fff; background-color: #555;padding: 12px 6px">${arrayRanking[i].score}</td>
+                <td style="color: #111; font-size: 18px ;background-color: #76777a;padding: 12px 6px">${arrayRanking[i].score}</td>
             </tr>`
     }
 
@@ -376,10 +382,16 @@ async function addEventForTimer() {
                 intervalTime = setInterval(() => {
                     console.log(endTime.format("m:s"))
                     // $("#timeEnd").innerHTML = endTime.format("m:s")
+                    let timeEnd = new Date(localStorage.getItem("_timeEnd")).getTime()
+                    let currentTime = new Date().getTime()
+                    var diffTime = timeEnd - currentTime;
+                    var duration = moment.duration(diffTime, 'milliseconds');
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {
-                        console.log(endTime, moment(new Date()))
+                        // console.log(endTime, moment(new Date()))
+                        $("#minute").val(duration.minutes())
+                        $("#second").val(duration.seconds())
                         $("#timeEnd").text("Estimate end time: " + endTime.format("hh:mm:ss"))
                     }
                 }, 1000)
@@ -443,7 +455,7 @@ async function addEventForMyChallengePage() {
             console.log(currentChallenge)
             localStorage.setItem("currentChallenge", JSON.stringify(currentChallenge))
             $("#nameChallenge").text(currentChallenge.name)
-            $("#scoreChallenge").text(`You got ${currentChallenge.score} points, yayy!!!`)
+            $("#scoreChallenge").text(`YOU WILL GET ${currentChallenge.score} POINTS, YAYY!!!`)
         } else {
             toastr.success("User has been done all challenge")
             setTimeout(() => {
@@ -454,7 +466,7 @@ async function addEventForMyChallengePage() {
         let currentChallenge = JSON.parse(localStorage.getItem("currentChallenge"))
         if(currentChallenge) {
             $("#nameChallenge").text(currentChallenge.name)
-            $("#scoreChallenge").text(`You got ${currentChallenge.score} points, yayy!!!`)
+            $("#scoreChallenge").text(`YOU WILL GET ${currentChallenge.score} POINTS, YAYY!!!`)
         }
         $("#startChallenge").css("display", "none")
         $("#checkDone").click(function() {
@@ -487,12 +499,18 @@ async function addEventForDefaultChallengePage() {
             let intervalTime = null 
             await new Promise((resolve) => {
                 intervalTime = setInterval(() => {
-                    console.log(endTime.format("m:s"))
+                    // console.log(endTime.format("m:s"))
                     // $("#timeEnd").innerHTML = endTime.format("m:s")
+                    let timeEnd = new Date(localStorage.getItem("timeEnd")).getTime()
+                    let currentTime = new Date().getTime()
+                    var diffTime = timeEnd - currentTime;
+                    var duration = moment.duration(diffTime, 'milliseconds');
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {
-                        console.log(endTime, moment(new Date()))
+                        // console.log(endTime, moment(new Date()))
+                        $("#minute").val(duration.minutes())
+                        $("#second").val(duration.seconds())
                         $("#timeEnd").text("Estimate end time: " + endTime.format("hh:mm:ss"))
                     }
                 }, 1000)
@@ -538,8 +556,8 @@ async function addEventForDefaultChallengePage() {
             let endTime = moment(new Date())
             endTime = endTime.add(parseInt(minute.val()), "m")
             endTime = endTime.add(parseInt(second.val()), "s")
-            console.log(endTime.format("m:s"))
-            console.log(minute.val(), second.val())
+            // console.log(endTime.format("m:s"))
+            // console.log(minute.val(), second.val())
 
             localStorage.setItem("isProcessChallenge", true)
             localStorage.setItem("timeEnd", endTime.toString())
@@ -552,12 +570,18 @@ async function addEventForDefaultChallengePage() {
             let intervalTime = null 
             await new Promise((resolve) => {
                 intervalTime = setInterval(() => {
-                    console.log(endTime.format("m:s"))
+                    // console.log(endTime.format("m:s"))
                     // $("#timeEnd").innerHTML = endTime.format("m:s")
+                    let timeEnd = new Date(localStorage.getItem("timeEnd")).getTime()
+                    let currentTime = new Date().getTime()
+                    var diffTime = timeEnd - currentTime;
+                    var duration = moment.duration(diffTime, 'milliseconds');
                     if(endTime < moment(new Date())) {
                         resolve()
                     } else {
-                        console.log(endTime, moment(new Date()))
+                        // console.log(endTime, moment(new Date()))
+                        $("#minute").val(duration.minutes())
+                        $("#second").val(duration.seconds())
                         $("#timeEnd").text("Estimate end time: " + endTime.format("hh:mm:ss"))
                     }
                 }, 1000)
