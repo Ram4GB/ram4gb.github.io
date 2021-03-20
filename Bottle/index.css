@@ -1,0 +1,575 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"); */
+
+@font-face {
+  font-family: 'Brandon_Grotesque';
+  font-weight: 400;
+  src: url('./fonts/Brandon_Grotesque/Brandon_reg.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Brandon_Grotesque';
+  font-weight: bold;
+  src: url('./fonts/Brandon_Grotesque/Brandon_bld.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Brandon_Grotesque';
+  font-style: italic;
+  src: url('./fonts/Brandon_Grotesque/Brandon_blk_it.otf') format('opentype');
+}
+
+.blue {
+  color: #0070b0;
+}
+
+.white1 {
+  color: #cfd2d3;
+}
+
+.red {
+  color: #b20c2f;
+}
+
+.gray {
+  color: #76777a;
+}
+
+.white1 {
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Brandon_Grotesque', sans-serif;
+}
+
+.popup-image {
+  background-image: url('./images/SignUp-Edited-19.jpg');
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup-image-instruction {
+  background-image: url('./images/Instruction.png');
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-dialog {
+  max-width: 660px;
+}
+
+.btn-sign-up {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-sign-up:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.blue-button {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3c93d5;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.btn-upload {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type='file'] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.oh-my-button {
+  padding: 15px 24px !important;
+  background: none !important;
+  border-radius: 30px !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+}
+
+.toast-message {
+  font-family: 'Brandon_Grotesque', sans-serif;
+  text-transform: capitalize;
+}
+
+button {
+  font-weight: bold !important;
+  display: none;
+}
+
+body {
+  /* background-image: url("coorslight-mountains-main.jpg"); */
+  /* background-position: center; */
+  background-image: url('./images/Background\ 123.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.form {
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  padding: 20px;
+  color: #fff;
+  max-width: 800px;
+}
+
+.input-register {
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 15px;
+  padding-left: 0px;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.input-register::placeholder {
+  color: #fff;
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.form-item::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+#btnLogin {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 6px 15px;
+}
+
+#btnRegister {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 6px 15px;
+}
+
+.border-bottom {
+  font-size: 30px;
+  position: relative;
+}
+
+.border-bottom::after {
+  content: '';
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -4px;
+}
+
+.wrap-border {
+  border: 5px solid #fff;
+  padding: 40px 20px;
+}
+
+.input-search {
+  border: 4px solid #fff;
+  text-align: center;
+  padding: 10px 8x;
+  font-size: 30px;
+  width: 100%;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: none;
+  color: #fff;
+}
+
+.input-search::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.fas.fa-search {
+  position: absolute;
+  top: 37%;
+  color: #fff;
+  right: 12px;
+  font-size: 25px;
+}
+
+.input {
+  background: none;
+}
+
+.swing {
+  -moz-animation: 3s ease 0s normal none infinite swing-three;
+  -moz-transform-origin: center top;
+  -webkit-animation: swing-three 0.5s 3.25 ease-in-out;
+  /* -webkit-transform-origin:top; */
+}
+
+.swing2 {
+  -moz-animation: 3s ease 0s normal none infinite swing-three;
+  -moz-transform-origin: center top;
+  -webkit-animation: swing-threee 0.5s infinite ease-in-out;
+  /* -webkit-transform-origin:top; */
+}
+
+@keyframes swing-three {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+
+@keyframes swing-threee {
+  0% {
+    -webkit-transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #111;
+}
+
+.snowflake {
+  color: #fff;
+  font-size: 3em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+/* https://codepen.io/codeconvey/pen/xRzQay */
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+.modal-content {
+  border: none;
+}
+.card:nth-child(1) {
+  order: 2;
+}
+.card:nth-child(2) {
+  order: 3;
+}
+.card:nth-child(3) {
+  order: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+@media only screen and (min-width: 1000px) {
+  .timer {
+    /* max-width: 500px;
+        margin: auto;
+        display: block; */
+    justify-content: center;
+  }
+  .modal {
+    top: 80px !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #NoPhoneChallenge {
+    width: 100%;
+  }
+  .sign-up-button {
+    bottom: 150px !important;
+    /* transform: translateY(-50%); */
+    padding: 4px 8px;
+  }
+  .prize-broad-button {
+    bottom: 100px !important;
+    /* transform: translateY(-50%); */
+    padding: 4px 8px;
+  }
+  .popup-image-instruction {
+    top: -100px;
+  }
+  .card:nth-child(1) {
+    order: 1;
+  }
+  .card:nth-child(2) {
+    order: 2;
+  }
+  .card:nth-child(3) {
+    order: 3;
+  }
+  #nophone-banner {
+    width: 100%;
+    padding-top: 10%;
+  }
+}
