@@ -71,7 +71,7 @@ window.onload = async function() {
 
         let users = await $.ajax({
                         method: 'GET',
-                        url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users'
+                        url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users'
         })
 
         let index = users.findIndex(user => user.email === email.val())
@@ -103,7 +103,7 @@ window.onload = async function() {
                     
                     let result = await $.ajax({
                         method: 'POST',
-                        url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users',
+                        url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users',
                         data: {
                             email: email.val(),
                             password: password.val(),
@@ -140,7 +140,7 @@ window.onload = async function() {
 
         let users = await $.ajax({
             method: 'GET',
-            url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users',
+            url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users',
             data: {
                 email: email.val()
             }
@@ -301,7 +301,7 @@ window.onload = async function() {
 
                     let result = await $.ajax({
                         method: 'POST',
-                        url: `http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users/${currentUser.id}/challenge`,
+                        url: `https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users/${currentUser.id}/challenge`,
                         data: {
                             item: currentChallenge,
                             imageUrl: display_url
@@ -336,7 +336,7 @@ window.onload = async function() {
 async function addEventForRanking() {
     let users = await $.ajax({
         method: 'GET',
-        url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users'
+        url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users'
     })
     console.log(users)
 
@@ -439,14 +439,14 @@ async function addEventForMyChallengePage() {
         })
     
         let challenge = await $.ajax({
-            url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/challenge',
+            url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/challenge',
             method: 'GET'
         })
         console.log(challenge)
         let userLocal = localStorage.getItem("user")
         userLocal = JSON.parse(userLocal)
         let user = await $.ajax({
-            url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/users/' + userLocal.id,
+            url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/users/' + userLocal.id,
             method: 'GET'
         })
         console.log(user)
@@ -488,7 +488,7 @@ async function addEventForMyChallengePage() {
 
 async function addEventForDefaultChallengePage() {
     // let challenge = await $.ajax({
-    //     url: 'http://5ce2c23be3ced20014d35e3d.mockapi.io/api/challenge',
+    //     url: 'https://5ce2c23be3ced20014d35e3d.mockapi.io/api/challenge',
     //     method: 'GET'
     // })
 
