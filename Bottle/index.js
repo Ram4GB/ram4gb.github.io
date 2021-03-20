@@ -29,8 +29,12 @@ window.onload = async function() {
     }
 
     // nếu mà chưa login thì chỉ load màn hình default-challenge
-    if(!isLogin && (window.location.pathname === urlGit + '/mychallenge.html' || window.location.pathname === urlGit + '/index.html')) {
-        window.location.assign(urlGit + "/default-challenge.html")
+    // if(!isLogin && (window.location.pathname === urlGit + '/index.html')) {
+    //     window.location.assign(urlGit + "/default-challenge.html")
+    // }
+
+    if(!isLogin && (window.location.pathname === urlGit + '/mychallenge.html')) {
+        window.location.assign(urlGit + "/login.html")
     }
 
     // login rồi mà nó muốn vào login lại thì đẩy về trang chủ của nó
