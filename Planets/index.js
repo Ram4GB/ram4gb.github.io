@@ -50,7 +50,7 @@ function randomStar() {
         el.style.bottom =
             Math.floor(Math.random() * window.document.body.offsetHeight) +
             "px";
-        el.style.width = Math.floor(Math.random() * 5) + 10 + "px";
+        el.style.width = Math.floor(Math.random() * 5) + 5 + "px";
         el.style.height = el.style.width;
         el.classList.add("star");
 
