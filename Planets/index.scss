@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap");
+
+$primary-bg-color: #44008b;
+$secondary-bg-color: #e54ed0;
+
+$primary-text-color: #ffe4f2;
+$secondary-text-color: #e54ed0;
+
+* {
+    font-family: "IBM Plex Sans", sans-serif !important;
+    box-sizing: border-box;
+}
+
+.planet {
+    &__name {
+        font-size: 30px;
+        color: $secondary-text-color;
+        font-weight: bold;
+    }
+    &__description {
+        color: $primary-text-color;
+        font-size: 20px;
+    }
+
+    &__img {
+        & img {
+            width: 500px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        & .show-on-scroll {
+            visibility: hidden;
+
+            &--right.is-visible {
+                visibility: visible;
+                animation: 1.5s zoomInRight ease;
+            }
+
+            &--left.is-visible {
+                visibility: visible;
+                animation: 1.5s zoomInLeft ease;
+            }
+        }
+    }
+
+    & ul {
+        list-style: none;
+        padding-left: 0;
+
+        & li {
+            margin-bottom: 15px;
+            line-height: 1.5rem;
+        }
+    }
+    button {
+        background-color: $secondary-bg-color;
+        padding: 10px 15px;
+        outline: none;
+        color: $primary-text-color;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    &--right-pic {
+        & .planet__description {
+            margin-right: 5px;
+        }
+    }
+}
+
+.star {
+    font-size: 50px;
+    z-index: 10000;
+    position: fixed;
+    display: block;
+    border-radius: 50%;
+    animation: 1s starRising ease infinite both;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 17px 0px #ffe4f2;
+    background-color: #ffe4f2;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background-color: $primary-bg-color;
+}
+
+@keyframes starRising {
+    0% {
+        transform: scale(0.5);
+        font-weight: bold;
+    }
+
+    100% {
+        transform: scale(1);
+        font-weight: bold;
+    }
+}
+
+@keyframes zoomInRight {
+    0% {
+        transform: scale(0.2) translate(500px, 500px);
+    }
+
+    70% {
+        transform: scale(1.2) translate(0px, 0px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomInLeft {
+    0% {
+        transform: scale(0.2) translate(-500px, 500px);
+    }
+
+    70% {
+        transform: scale(1.2) translate(0px, 0px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    background-color: #000000;
+    cursor: url(./images/cursor.png), auto;
+}
+
+p {
+    color: #ffe4f2;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: (100 / 12) * $i * 1%;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: 100%;
+        }
+    }
+
+    .planet {
+        &__img {
+            & img {
+                width: 100px;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+            }
+
+            & .show-on-scroll {
+                visibility: hidden;
+
+                &--right.is-visible {
+                    visibility: visible;
+                }
+
+                &--left.is-visible {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__description {
+            font-size: 16px;
+        }
+    }
+}
