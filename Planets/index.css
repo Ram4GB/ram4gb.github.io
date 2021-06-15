@@ -29,14 +29,14 @@
 
 .planet__img .show-on-scroll--right.is-visible {
   visibility: visible;
-  -webkit-animation: 1.5s zoomInRight ease;
-          animation: 1.5s zoomInRight ease;
+  -webkit-animation: 1.5s zoomInRight ease, 36s rotate 1.5s ease infinite;
+          animation: 1.5s zoomInRight ease, 36s rotate 1.5s ease infinite;
 }
 
 .planet__img .show-on-scroll--left.is-visible {
   visibility: visible;
-  -webkit-animation: 1.5s zoomInLeft ease;
-          animation: 1.5s zoomInLeft ease;
+  -webkit-animation: 1.5s zoomInLeft ease, 36s rotate 1.5s ease infinite;
+          animation: 1.5s zoomInLeft ease, 36s rotate 1.5s ease infinite;
 }
 
 .planet ul {
@@ -105,6 +105,28 @@
     -webkit-transform: scale(1);
             transform: scale(1);
     font-weight: bold;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
